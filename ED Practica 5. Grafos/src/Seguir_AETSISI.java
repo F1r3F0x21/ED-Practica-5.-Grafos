@@ -230,7 +230,6 @@ public void mostrar(){
         int n = devuelvePosNombre(nombre1);
         int m = devuelvePosNombre(nombre2); 
         boolean[] visitados = new boolean[mired.getNumVertices()];
-
         mired.recorrerAmplitudVertice(n, visitados, resul);
         if (visitados[m]){
             resul = true;
@@ -244,18 +243,26 @@ public void mostrar(){
    public void mostrarSeguidoresDe(String nombre1){
     boolean resul = false;
     int n = devuelvePosNombre(nombre1);
+    int rep = 0;
     boolean[] visitados = new boolean[mired.getNumVertices()];
     System.out.println("Seguidores de " + contactos[n].getNombre()+ "(" + n + ")");
         for (int j = 0; j < getNumPersonas(); j++){
             mired.recorrerAmplitudVertice(j, visitados, resul);
-            if (visitados[n] && j != n){
-                System.out.println(j + ": " + contactos[j].getNombre());
+            if (visitados[n] && visitados[j]){
+                if (j != n){
+                    System.out.println(j + ": " + contactos[j].getNombre());
+                    rep++;
+                }
                 for (int i = 0; i < getNumPersonas(); i++){
                     visitados[i] = false;
                 }
             }
         }
+        if (rep == 0){
+            System.out.println("No existe camino para " + n);
+        }
    }
+   
 
 
 }
