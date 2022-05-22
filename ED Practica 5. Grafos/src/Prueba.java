@@ -73,7 +73,7 @@ public class Prueba {
         
         System.out.println();  
         System.out.println("Apartado 2.2.8. Seguidores de Alicia");  
-        g.mostrarSeguidoresDe("Alicia Maravillas");
+        g.mostrarSeguidoresDe("Eva Adan");
        
     }
 }

@@ -229,7 +229,7 @@ public class GrafoMA {
                 }
             }
         }
-        if (!completo)System.out.println();
+        if (!completo);//System.out.println();
     }
 
     // Para  recorrer todos los vertices del grafo, recorriendo cada componente conexa(GN)
