@@ -69,11 +69,11 @@ public class Prueba {
         g.motrarSeguidosPor(guille);
         System.out.println();  
         System.out.println("Apartado 2.2.7. Juan 0 sigue a Alicia 3");  
-        System.out.println(g.mostrarEsSeguidaPor("Eva Adan", "Clara Oscuro"));
+        System.out.println(g.mostrarEsSeguidaPor("Juan Nadie", "Alicia Maravillas"));
         
         System.out.println();  
         System.out.println("Apartado 2.2.8. Seguidores de Alicia");  
-        g.mostrarSeguidoresDe("Eva Adan");
+        g.mostrarSeguidoresDe("Alicia Maravillas");
        
     }
 }
